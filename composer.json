@@ -1,0 +1,18 @@
+{
+    "name": "fferriere/generator-example",
+    "description": "Little project to explain generator",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Florian FERRIERE",
+            "email": "florian.ferriere@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Fferriere\\GeneratorExample\\": "src/"
+        }
+    },
+    "require": {}
+}
