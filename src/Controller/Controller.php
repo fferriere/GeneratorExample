@@ -51,8 +51,30 @@ class Controller {
         $persons = [
             new Person('Harry', 'Potter', new \DateTime('1980-08-31')),
             new Person('Ron', 'Weasley', new \DateTime('1980-03-01')),
-            new Person('Hermione', 'Granger', new \DateTime('1979-09-19'))
+            new Person('Hermione', 'Granger', new \DateTime('1979-09-19')),
+            new Person('Severus', 'Rogue', new \DateTime('1960-01-09')),
+            new Person('Lily', 'Evans', new \DateTime('1960-01-30')),
+            new Person('James', 'Potter', new \DateTime('1960-03-27')),
+            new Person('Ginny', 'Weasley', new \DateTime('1981-08-11')),
+            new Person('Minerva', 'McGonagall', new \DateTime('1935-10-04')),
+            new Person('Molly', 'Weasley', new \DateTime('1949-10-30')),
+            new Person('Sirius', 'Black', new \DateTime('1959-11-03')),
+            new Person('Rubeus', 'Hagrid', new \Datetime('1928-12-06'))
         ];
+
+        $persons = array_merge($persons, $persons);
+        $persons = array_merge($persons, $persons);
+        $persons = array_merge($persons, $persons);
+        $persons = array_merge($persons, $persons);
+        $persons = array_merge($persons, $persons);
+        $persons = array_merge($persons, $persons);
+        $persons = array_merge($persons, $persons);
+        $persons = array_merge($persons, $persons);
+        $persons = array_merge($persons, $persons);
+        $persons = array_merge($persons, $persons);
+        $persons = array_merge($persons, $persons);
+        $persons = array_merge($persons, $persons);
+        $persons = array_merge($persons, $persons);
 
         return new PersonRepository($persons);
     }

@@ -19,7 +19,7 @@ class PersonRepository
         return $this->persons;
     }
 
-    public function findAllAsArray()
+    public function findAllAsArrayGenerator()
     {
         $persons = $this->findAll();
 
@@ -30,6 +30,21 @@ class PersonRepository
         foreach ($persons as $person) {
             yield $this->convertPersonAsArray($person);
         }
+    }
+
+    public function findAllAsArray() {
+        return $this->findAllAsArrayGenerator();
+    }
+
+    public function findAllAsArrayWithArray()
+    {
+        $persons = [];
+
+        foreach ($this->findAll() as $person) {
+            $persons[] = $this->convertPersonAsArray($person);
+        }
+
+        return $persons;
     }
 
     protected function convertPersonAsArray(Person $person)
