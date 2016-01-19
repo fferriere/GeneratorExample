@@ -1,30 +1,30 @@
 <?php
 
-$datas = [
+$values = [
     [ 'first_name' => 'Harry', 'last_name' => 'Potter', 'birthday' => '1980-08-31' ],
     [ 'first_name' => 'Ron', 'last_name' => 'Weasley', 'birthday' => '1980-03-01' ],
     [ 'first_name' => 'Hermione', 'last_name' => 'Granger', 'birthday' => '1979-09-19' ]
 ];
 
-function first_conversion($datas)
+function first_conversion($values)
 {
     $id = 0;
-    foreach ($datas as $data) {
+    foreach ($values as $value) {
         $id++;
-        yield array_merge(['id' => $id], $data);
+        yield array_merge(['id' => $id], $value);
     }
 }
 
-function second_conversion($datas)
+function second_conversion($values)
 {
-    foreach ($datas as $data) {
-        $data['last_name'] = strtoupper($data['last_name']);
-        yield $data;
+    foreach ($values as $value) {
+        $value['last_name'] = strtoupper($value['last_name']);
+        yield $value;
     }
 }
 
 $toConverted = first_conversion(
-    second_conversion($datas)
+    second_conversion($values)
 );
 
 foreach ($toConverted as $convertedData) {
